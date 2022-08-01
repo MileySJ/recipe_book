@@ -1,3 +1,5 @@
 from django.contrib import admin
+from .models import Asian, Italian
 
-# Register your models here.
+admin.site.register(Asian)
+admin.site.register(Italian)
