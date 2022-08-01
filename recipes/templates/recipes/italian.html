@@ -1,1 +1,16 @@
-italian
+{% load static %}
+
+{% for italian in italians %}
+
+{{ italian.title }}
+
+{% if italian.image %}
+
+<img src="{{ italian.image.url }}">
+{% endif %}
+
+
+{{ italian.ingrediants }}
+{{ italian.description }}
+
+{% endfor %}

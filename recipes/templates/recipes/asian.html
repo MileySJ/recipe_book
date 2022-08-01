@@ -1,1 +1,15 @@
-hi asian
+{% load static %}
+
+{% for asian in asians %}
+
+{{ asian.title }}
+
+{% if asian.image %}
+
+<img src="{{ asian.image.url }}">
+{% endif %}
+
+
+{{ asian.ingrediants }}
+{{ asian.description }}
+{% endfor %}

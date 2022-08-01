@@ -3,7 +3,7 @@ from .models import Asian, Italian
 
 
 def home(request):
-    return render(request, 'recipes/home.html', name='home')
+    return render(request, 'recipes/home.html')
 
 def asian(request):
     asians = Asian.objects.all()
