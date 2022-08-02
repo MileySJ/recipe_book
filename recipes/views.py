@@ -20,3 +20,6 @@ def italian(request):
 def italian_detail(request, italian_id):
     italian = get_object_or_404(Italian, pk=italian_id)
     return render(request, 'recipes/italian_detail.html', {'italian':italian})
+
+def about(request):
+    return render(request, 'recipes/about.html')
