@@ -15,6 +15,7 @@ body {
 }
 #recipetitle {
     font-size: 3rem;
+    color: black;
 }
 
 @media (min-width: 992px) {
