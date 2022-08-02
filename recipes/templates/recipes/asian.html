@@ -1,15 +1,21 @@
+{% extends 'recipes/base.html' %}
 {% load static %}
 
-{% for asian in asians %}
 
-{{ asian.title }}
+{% block content %}
 
-{% if asian.image %}
+    {% for asian in asians %}
 
-<img src="{{ asian.image.url }}">
-{% endif %}
+        {{ asian.title }}
 
+        {% if asian.image %}
+            <img src="{{ asian.image.url }}">
+        {% endif %}
 
-{{ asian.ingrediants }}
-{{ asian.description }}
-{% endfor %}
+        {{ asian.ingrediants }}
+        {{ asian.description }}
+
+    {% endfor %}
+
+{% endblock %}
+

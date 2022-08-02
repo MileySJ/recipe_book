@@ -1,16 +1,20 @@
+{% extends 'recipes/base.html' %}
 {% load static %}
 
-{% for italian in italians %}
+{% block content %}
 
-{{ italian.title }}
+    {% for italian in italians %}
 
-{% if italian.image %}
+        {{ italian.title }}
 
-<img src="{{ italian.image.url }}">
-{% endif %}
+        {% if italian.image %}
+            <img src="{{ italian.image.url }}">
+        {% endif %}
 
 
-{{ italian.ingrediants }}
-{{ italian.description }}
+        {{ italian.ingrediants }}
+        {{ italian.description }}
 
-{% endfor %}
+    {% endfor %}
+
+{% endblock %}
