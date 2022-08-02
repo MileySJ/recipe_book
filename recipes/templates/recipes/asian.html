@@ -2,29 +2,29 @@
 {% load static %}
 
 
-{% block content %}    
-    <div class="row m-5 justify-content-center">
-       {% for asian in asians %}
-    <div class="col-5 text-center m-4">
+{% block content %}
+<div class="row m-5 justify-content-center">
+  {% for asian in asians %}
+  <div class="col-5 text-center m-4">
 
 
 
 
-    <div class="card p-1" style="width: 500px; height: 600px;" id="recipescards">
+    <a href="{% url 'recipes:asiandetail' asian.id %}">
+      <div class="card p-1" style="width: 500px; height: 600px;" id="recipescards">
         {% if asian.image %}
-            <img src="{{ asian.image.url }}" height="70%" width="100%" class="card-img-top">
+        <img src="{{ asian.image.url }}" height="70%" width="100%" class="card-img-top">
         {% endif %}
         <div class="card-body text-center">
           <h5 class="card-title" id="recipetitle">{{ asian.title }}</h5>
         </div>
       </div>
+    </a>
 
-    
-    
-</div>
 
-{% endfor %}
+  </div>
+
+  {% endfor %}
 </div>
 </div>
 {% endblock %}
-

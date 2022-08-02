@@ -36,7 +36,7 @@
     <div class="container-fluid">
         <div class="row">
         <nav class="navbar navbar-expand-lg p-3 navbar-light bg-light" id="navcolor">
-              <a class="navbar-brand" href="{% url 'home' %}"><img class="img-fluid mx-3" src="https://www.coolgenerator.com/Data/Textdesign/202208/da91f757b95c58d4dc7e126d4eb3a125.png"></a>
+              <a class="navbar-brand" href="{% url 'recipes:home' %}"><img class="img-fluid mx-3" src="https://www.coolgenerator.com/Data/Textdesign/202208/da91f757b95c58d4dc7e126d4eb3a125.png"></a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -48,8 +48,8 @@
                           Recipes
                         </a>
                         <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="{% url 'asian' %}">Asian</a></li>
-                          <li><a class="dropdown-item" href="{% url 'italian' %}">Italian</a></li>
+                          <li><a class="dropdown-item" href="{% url 'recipes:asian' %}">Asian</a></li>
+                          <li><a class="dropdown-item" href="{% url 'recipes:italian' %}">Italian</a></li>
                         </ul>
                       </li>
                   <li class="nav-item">

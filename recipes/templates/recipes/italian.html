@@ -9,7 +9,7 @@
 
 
 
-
+<a href="{% url 'recipes:italiandetail' italian.id %}">
     <div class="card p-1" style="width: 500px; height: 600px;" id="recipescards">
         {% if italian.image %}
             <img src="{{ italian.image.url }}" height="70%" width="100%" class="card-img-top">
@@ -18,7 +18,7 @@
           <h5 class="card-title" id="recipetitle">{{ italian.title }}</h5>
         </div>
       </div>
-
+    </a>
     
     
 </div>
