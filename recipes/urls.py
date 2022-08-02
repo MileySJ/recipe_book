@@ -7,5 +7,6 @@ urlpatterns = [
     path('asian/', views.asian, name='asian'),
     path('italian/', views.italian, name='italian'),
     path('<int:asian_id>', views.asiandetail, name='asiandetail'),
-    path('<int:italian>', views.italiandetail, name='italiandetail'),
+    path('<int:italian_id>', views.italiandetail, name='italiandetail'),
+
 ]

@@ -18,5 +18,5 @@ def italian(request):
     return render(request, 'recipes/italian.html', {'italians':italians})
 
 def italiandetail(request, italian_id):
-    italian = get_object_or_404(Italian, pk=italian)
+    italian = get_object_or_404(Italian, pk=italian_id)
     return render(request, 'recipes/italiandetail.html', {'italian':italian})
