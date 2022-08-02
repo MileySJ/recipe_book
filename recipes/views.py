@@ -9,14 +9,14 @@ def asian(request):
     asians = Asian.objects.all()
     return render(request, 'recipes/asian.html', {'asians':asians})
 
-def asiandetail(request, asian_id):
+def asian_detail(request, asian_id):
     asian = get_object_or_404(Asian, pk=asian_id)
-    return render(request, 'recipes/asiandetail.html', {'asian':asian})
+    return render(request, 'recipes/asian_detail.html', {'asian':asian})
 
 def italian(request):
     italians = Italian.objects.all()
     return render(request, 'recipes/italian.html', {'italians':italians})
 
-def italiandetail(request, italian_id):
+def italian_detail(request, italian_id):
     italian = get_object_or_404(Italian, pk=italian_id)
-    return render(request, 'recipes/italiandetail.html', {'italian':italian})
+    return render(request, 'recipes/italian_detail.html', {'italian':italian})

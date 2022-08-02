@@ -10,8 +10,8 @@ body {
     font-family: 'Lato', sans-serif;
     background: hsla(0, 0%, 0%, 0.977);
 }
-#recipescards {
-    color: black;
+#recipetext {
+    color: rgb(255, 255, 255);
 }
 #recipetitle {
     font-size: 3rem;

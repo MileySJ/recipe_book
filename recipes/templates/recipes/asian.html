@@ -10,7 +10,7 @@
 
 
 
-    <a href="{% url 'recipes:asiandetail' asian.id %}">
+    <a href="{% url 'recipes:asian_detail' asian.id %}">
       <div class="card p-1" style="width: 500px; height: 600px;" id="recipescards">
         {% if asian.image %}
         <img src="{{ asian.image.url }}" height="70%" width="100%" class="card-img-top">
