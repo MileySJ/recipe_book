@@ -5,8 +5,8 @@ from django.db import models
 class Asian(models.Model):
     title = models.CharField(max_length=300)
     image = models.ImageField(blank=True)
-    ingrediants = models.TextField(max_length=500)
-    description = models.TextField(max_length=800)
+    ingredients = models.TextField(max_length=1000)
+    description = models.TextField(max_length=1000)
 
     def __str__(self):
         return self.title
@@ -14,8 +14,8 @@ class Asian(models.Model):
 class Italian(models.Model):
     title = models.CharField(max_length=300)
     image = models.ImageField(blank=True)
-    ingrediants = models.TextField(max_length=500)
-    description = models.TextField(max_length=800)
+    ingredients = models.TextField(max_length=1000)
+    description = models.TextField(max_length=1000)
 
     def __str__(self):
         return self.title
