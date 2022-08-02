@@ -3,9 +3,9 @@
 
 {% block content %}
 
-<div class="row m-5"  style="border-style: solid; border-color: rgb(255, 0, 0)">
+<div class="row m-5">
     <div class="col-6 py-4" id="recipetext">
-    <h3 class="text-center">{{ asian.title }}</h3> <br> {{ asian.ingrediants }} <br> {{ asian.description }}
+    <h3 class="text-center">{{ asian.title }}</h3> <br> {{ asian.ingredients|safe }} <br> {{ asian.description|safe }}
     </div>
     <div class="col-6">
         {% if asian.image %}
@@ -13,10 +13,4 @@
         {% endif %}
         </div>
 </div>
-
-
-    
-  
-
-
 {% endblock %}
