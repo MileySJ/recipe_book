@@ -7,6 +7,7 @@
 
 <head>
     <!-- CSS only -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 
@@ -16,10 +17,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
+    
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="{% static 'portfolio/custom.css' %}">
+    <link rel="stylesheet" href="{% static 'recipes/custom.css' %}">
 
     <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
 
@@ -31,30 +33,34 @@
 
 
 <body>
-    <div class="container-fluid bg-dark" style="border-style: solid; border-color: green">
+    <div class="container-fluid">
         <div class="row">
-        <nav class="navbar navbar-expand-lg p-4 bg-light" id="navcolor">
-              <a class="navbar-brand" href="{% url 'home' %}">Recipe book</a>
+        <nav class="navbar navbar-expand-lg p-3 navbar-light bg-light" id="navcolor">
+              <a class="navbar-brand" href="{% url 'home' %}"><img class="img-fluid mx-3" src="https://www.coolgenerator.com/Data/Textdesign/202208/da91f757b95c58d4dc7e126d4eb3a125.png"></a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
-              <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+              <div class="collapse navbar-collapse justify-content-end mx-4" id="navbarNavDropdown">
                 <ul class="navbar-nav">
-                    <li class="nav-item px-2 mx-2">
-                    <a class="nav-link active" aria-current="page" href="">Recipes</a>
-                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Recipes
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="{% url 'asian' %}">Asian</a></li>
+                          <li><a class="dropdown-item" href="{% url 'italian' %">Italian</a></li>
+                        </ul>
+                      </li>
                   <li class="nav-item">
                     <a class="nav-link active" href="" target="_blank">About</a>
                   </li>
-                </ul>
-                </li>
                 </ul>
               </div>
           </nav>
 </div>
 
-    <div class="container-fluid" style="border-style: solid; border-color: red">
+    <div class="container-fluid">
         {% block content %} {% endblock %}
     </div>
     </div>
