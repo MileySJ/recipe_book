@@ -1,4 +1,6 @@
+from itertools import chain
 from django.shortcuts import render, get_object_or_404
+from django.http import HttpResponse
 from .models import Asian, Italian
 
 
@@ -23,3 +25,18 @@ def italian_detail(request, italian_id):
 
 def about(request):
     return render(request, 'recipes/about.html')
+
+def research(request):
+    return render(request, 'recipes/search.html')
+
+
+def recipe(request):
+
+    search = request.GET.get('search')
+
+    recipe_asian = Asian.objects.filter(title__icontains=search)
+    recipe_italian = Italian.objects.filter(title__icontains=search)
+    recipes = chain(recipe_asian, recipe_italian)
+    return render(request, 'recipes/recipe.html', {'recipes':recipes})
+
+    

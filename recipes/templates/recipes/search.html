@@ -1,0 +1,13 @@
+{% extends 'recipes/base.html' %}
+
+{% block content %}
+
+<div class='row m-5 justify-content-center'>
+    <form action="{% url 'recipes:recipe' %}" class="d-flex" role="search">
+        <input class="search form-control me-2" id="search" name="search" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+    </form>
+</div>
+
+
+{% endblock %}
